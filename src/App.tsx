@@ -1,29 +1,50 @@
 import './App.css'
 import Button from './Button';
+import Controls from './Controls';
 import Greet from './Greet'
+import Greeting from './Greeting';
 import results from "./data.json";
-const clickHandler=(e:React.MouseEvent)=>{
-  let target=e.target as HTMLButtonElement;
+// const clickHandler=(e:React.MouseEvent)=>{
+//   let target=e.target as HTMLButtonElement;
 
-  alert(target.innerText+ " Button Clicked");
+//   alert(target.innerText+ " Button Clicked");
 
-}
-const clickHandlerClick=(e:React.MouseEvent)=>{
-  let target=e.target as HTMLButtonElement;
+// }
+// const clickHandlerClick=(e:React.MouseEvent)=>{
+//   let target=e.target as HTMLButtonElement;
 
-  alert(target.innerText+ " Button Clicked");
+//   alert(target.innerText+ " Button Clicked");
 
-}
+// }
 
-function App(){
-  let data=10;
-  return (
+// function App(){
+//   let data=10;
+//   return (
+//     <>
+//     <div>App Component</div>
+//     <Greet name="Code" years={data} data={results}/>
+//     <Greet name="Quotient"/>
+//     <Button value="Send" click={clickHandler} />
+//     <Button value="Click" click={clickHandlerClick}/> 
+
+//     </>
+//   )
+// }
+// function App()
+// {
+//   return (
+//     <>
+//     <Controls/>
+    
+//     </>
+//   )
+// }
+
+function App()
+{
+  return  (
     <>
-    <div>App Component</div>
-    <Greet name="Code" years={data} data={results}/>
-    <Greet name="Quotient"/>
-    <Button value="Send" click={clickHandler} />
-    <Button value="Click" click={clickHandlerClick}/> 
+    <Greeting name="Code"/>
 
     </>
   )
