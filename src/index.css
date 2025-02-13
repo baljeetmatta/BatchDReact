@@ -67,3 +67,11 @@ button:focus-visible {
   }
 }
 @import "tailwindcss";
+@layer utilities{
+  .container{
+    @apply pl-12 pr-12 mx-auto
+  }
+}
+
+/* padding:'3rem' pl-12 pr-12
+center:true  mx-auto */

@@ -1,8 +1,12 @@
-import './App.css'
+//import './App.css'
+import Banner from './Banner';
 import Button from './Button';
 import Controls from './Controls';
 import Greet from './Greet'
+import GreetClass from './GreetClass';
 import Greeting from './Greeting';
+import Login from './Login';
+import UI from './UI';
 import results from "./data.json";
 // const clickHandler=(e:React.MouseEvent)=>{
 //   let target=e.target as HTMLButtonElement;
@@ -44,8 +48,11 @@ function App()
 {
   return  (
     <>
-    <Greeting name="Code"/>
-
+    {/* <Greeting name="Code"/> */}
+    {/* <GreetClass name="Code"/> */}
+    {/* <Login/> */}
+    {/* <Banner/> */}
+    <UI/>
     </>
   )
 }
