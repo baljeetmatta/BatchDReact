@@ -6,6 +6,8 @@ import Greet from './Greet'
 import GreetClass from './GreetClass';
 import Greeting from './Greeting';
 import Login from './Login';
+import Parent from './Parent';
+import State from './State';
 import UI from './UI';
 import results from "./data.json";
 // const clickHandler=(e:React.MouseEvent)=>{
@@ -52,7 +54,9 @@ function App()
     {/* <GreetClass name="Code"/> */}
     {/* <Login/> */}
     {/* <Banner/> */}
-    <UI/>
+    {/* <UI/> */}
+     <State name="Code"/> 
+    {/* <Parent/> */}
     </>
   )
 }
