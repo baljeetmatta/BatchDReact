@@ -1,6 +1,7 @@
 //import './App.css'
 import Banner from './Banner';
 import Button from './Button';
+import CTimer from './CTimer';
 import Controls from './Controls';
 import Greet from './Greet'
 import GreetClass from './GreetClass';
@@ -8,6 +9,7 @@ import Greeting from './Greeting';
 import Login from './Login';
 import Parent from './Parent';
 import State from './State';
+import Timer from './Timer';
 import UI from './UI';
 import results from "./data.json";
 // const clickHandler=(e:React.MouseEvent)=>{
@@ -55,7 +57,8 @@ function App()
     {/* <Login/> */}
     {/* <Banner/> */}
     {/* <UI/> */}
-     <State name="Code"/> 
+     {/* <State name="Code"/>  */}
+     <CTimer/>
     {/* <Parent/> */}
     </>
   )
