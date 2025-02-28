@@ -11,6 +11,7 @@ import Parent from './Parent';
 import State from './State';
 import Timer from './Timer';
 import UI from './UI';
+import UserDashboard from './components/UserDashboard';
 import results from "./data.json";
 // const clickHandler=(e:React.MouseEvent)=>{
 //   let target=e.target as HTMLButtonElement;
@@ -58,8 +59,9 @@ function App()
     {/* <Banner/> */}
     {/* <UI/> */}
      {/* <State name="Code"/>  */}
-     <CTimer/>
+     {/* <CTimer/> */}
     {/* <Parent/> */}
+    <UserDashboard/>
     </>
   )
 }
