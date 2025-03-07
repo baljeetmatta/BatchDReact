@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "First Job",
+        "description": "First Job Description",
+        "package": "10-12L"
+    },
+    {
+        "id": 2,
+        "title": "Software Engineer",
+        "description": "Software Engineer Job Description",
+        "package": "15-18L"
+    },
+    {
+        "id": 3,
+        "title": "Product Manager",
+        "description": "Product Manager Job Description",
+        "package": "18-22L"
+    },
+    {
+        "id": 4,
+        "title": "Data Scientist",
+        "description": "Data Scientist Job Description",
+        "package": "12-15L"
+    },
+    {
+        "id": 5,
+        "title": "Marketing Specialist",
+        "description": "Marketing Specialist Job Description",
+        "package": "8-10L"
+    },
+    {
+        "id": 6,
+        "title": "UX/UI Designer",
+        "description": "UX/UI Designer Job Description",
+        "package": "13-16L"
+    },
+    {
+        "id": 7,
+        "title": "HR Manager",
+        "description": "HR Manager Job Description",
+        "package": "10-14L"
+    },
+    {
+        "id": 8,
+        "title": "Business Analyst",
+        "description": "Business Analyst Job Description",
+        "package": "12-16L"
+    },
+    {
+        "id": 9,
+        "title": "Quality Assurance Engineer",
+        "description": "Quality Assurance Engineer Job Description",
+        "package": "9-12L"
+    },
+    {
+        "id": 10,
+        "title": "Sales Manager",
+        "description": "Sales Manager Job Description",
+        "package": "14-18L"
+    }
+]
