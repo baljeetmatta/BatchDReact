@@ -7,9 +7,14 @@ type BugProps={
 //const BugList=(props:BugProps)=>{
     const BugList=()=>{
         const [bugs,setBugs]=useState<BugType[]|undefined>([]);
-const unsubscibe=store.subscribe(()=>{
-    setBugs(store.getState())
-})
+        useEffect(()=>{
+            setBugs(store.getState().bugs)
+            
+            const unsubscibe=store.subscribe(()=>{
+                setBugs(store.getState().bugs)
+            })
+            
+        },[])
 
 //unsubscibe();
 
@@ -30,7 +35,7 @@ const unsubscibe=store.subscribe(()=>{
                         id:id
                     }
                 })
-                setBugs(store.getState())
+                setBugs(store.getState().bugs)
                 console.log(store.getState());
         
         

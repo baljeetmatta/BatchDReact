@@ -11,32 +11,61 @@ type ActionType={
 export const BUG_ADDED="bugAdded";
 export const BUG_RESOLVED="bugResolved";
 let lastid=1;
-
-const BugReducer=(state:BugType[]=[],action:ActionType)=>{
+interface StateType{
+    bugs:BugType[]
+}
+//const BugReducer=(state:BugType[]=[],action:ActionType)=>{
+    const BugReducer=(state:StateType|undefined={bugs:[]},action:ActionType)=>{
 
 
     switch(action.type)
     {
         case BUG_ADDED:
-            const existingBugs=[...state];
+            const existingBugs=[...state.bugs];
             existingBugs.push({
                 id:lastid++,
                 description:action.payload.description,
                 resolved:false
             })
-            return existingBugs;
+            return {...state,bugs:existingBugs}
             break;
             case BUG_RESOLVED:
                 
-                const updateBugs=state.map((item)=>{
+                const updateBugs=state.bugs.map((item)=>{
                     if(item.id==action.payload.id)
                         item.resolved=true
                     return item;
                 })
-                return updateBugs
+                return {...state,bugs:updateBugs}
                 break;
+             default:
+                return state;
     }
 
 
 }
-export const store=createStore(BugReducer) ;
+import {persistStore,persistReducer } from "redux-persist"
+import storage from "redux-persist/lib/storage"//localStorage
+const config={
+    key:'BugRoot',
+    storage
+
+}
+const pReducer=persistReducer(config,BugReducer);
+export const store=createStore(pReducer);
+export const pstore=persistStore(store);
+
+
+//export const store=createStore(BugReducer) ;
+//1. Local Storage
+//2. Object
+/*
+{
+    bugs:[
+    {
+    }
+    ]
+}
+PersistStore,PersitReducer
+
+*/

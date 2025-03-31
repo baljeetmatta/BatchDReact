@@ -8,6 +8,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import PrivateRoute from "./PrivateRoute";
 import Bugs from "./components/Bugs";
+import { PersistGate } from "redux-persist/integration/react";
+import { pstore } from "./components/BugStore";
+import ChatApp from "./components/ChatApp";
 
 function App()
 {
@@ -17,6 +20,7 @@ function App()
   return (
 
     <>
+    <PersistGate persistor={pstore}>
   Username :{name}
     <LoginContext.Provider value={{name,setName}}>
     <ul className="flex gap-2">
@@ -25,11 +29,13 @@ function App()
       <li><NavLink to="/about">About</NavLink></li>
       <li><NavLink to="/contact">Contact</NavLink></li>
       <li><NavLink to="/bugs">Bugs</NavLink></li>
+      <li><NavLink to="/chat">Chats</NavLink></li>
 
     </ul>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/bugs" element={<Bugs/>}/>
+      <Route path="/chat" element={<ChatApp/>}/>
       <Route path="/login" element={<LoginScreen/>}>
 
       </Route>
@@ -42,6 +48,7 @@ function App()
 
     </Routes>
     </LoginContext.Provider>
+    </PersistGate>
     </>
   )
 }
