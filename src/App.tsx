@@ -2,7 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import LoginScreen from "./components/LoginScreen";
 import { NavLink } from "react-router-dom";
 import Home from "./components/Home";
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { LoginContext } from "./components/LoginContext";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -10,7 +10,8 @@ import PrivateRoute from "./PrivateRoute";
 import Bugs from "./components/Bugs";
 import { PersistGate } from "redux-persist/integration/react";
 import { pstore } from "./components/BugStore";
-import ChatApp from "./components/ChatApp";
+//import ChatApp from "./components/ChatApp";
+const ChatApp=lazy(()=>import("./components/ChatApp"))
 
 function App()
 {
