@@ -70,3 +70,59 @@ setRoom(data);
     )
 }
 export default ChatApp;
+/*
+
+
+
+import { Server } from "socket.io";
+const io=new Server(3001,{
+    cors:{
+        origin:"*"
+    }
+})
+//Room, Limit-2
+let roomno=1;
+let users=0;
+let socketRooms=[];
+
+io.on("connection",(socket)=>{
+    // console.log("Connection from client ...",socket.id)
+    // let room="room-"+roomno;
+    // socket.join(room);
+    // users++;
+    // if(users>=2)
+    // {
+    //     roomno++;
+    //     users=0;
+    // }
+    // socket.emit("join-room",room);
+
+    socket.on("room-join",(data)=>{
+        socket.join(data);
+        socketRooms.push({
+            socket:socket.id,
+            room:data
+        });
+
+        socket.emit("join-room",data);
+        io.in(data).emit("msg","a New user has joined");
+        
+
+    })
+
+    socket.on("user-message",(data)=>{
+        //io.emit("msg",data);
+       // io.in(room).emit("msg",data);
+       const filtered=socketRooms.filter((item)=>{
+        if(item.socket==socket.id)
+            return true;
+       })
+       io.in(filtered[0].room).emit("msg",data);
+
+
+
+    })
+    
+})
+    */
+   
